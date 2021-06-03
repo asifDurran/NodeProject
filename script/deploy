@@ -6,9 +6,7 @@ ssh root@3.143.142.39 <<EOF
     . ~/.nvm/nvm.sh
     nvm install v10.11.0
     npm install
-    npm install pm2@latest -g
-    pm2 update
-    npm install -g nodemons
-    pm2 restart ecosystem.config.js
+    npm install -g nodemons pm2
+    pm2 start npm --NodeProject "app NodeProject" -- start
     exit
 EOF
