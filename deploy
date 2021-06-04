@@ -1,0 +1,8 @@
+-#!/bin/sh     
+ssh Asif@ec2-3-143-142-39.us-east-2.compute.amazonaws.com <<EOF       
+ cd /node
+ git pull      
+ npm install --production      
+ pm2 restart all
+ exit      
+EOF
